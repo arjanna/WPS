@@ -757,9 +757,11 @@ C  SET ARGUMENTS
      &                           (10. ** (-1. * gfld%ipdtmpl(11)))
 		 if ( level .lt. pmin ) cycle MATCH_LOOP
               elseif((gfld%ipdtmpl(10).eq.105).or.
-     &               (gfld%ipdtmpl(10).eq.118))then
+     &               (gfld%ipdtmpl(10).eq.118).or.
+     &               (gfld%ipdtmpl(10).eq.150)) then
                  ! Hybrid level (range from 1 to N)
                  level=gfld%ipdtmpl(12)
+                 print*,'level: ',level
               elseif(gfld%ipdtmpl(10).eq.104) then
                  ! Sigma level (range from 10000 to 0)
                  level=gfld%ipdtmpl(12)
