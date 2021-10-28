@@ -760,7 +760,8 @@ C  SET ARGUMENTS
      &               (gfld%ipdtmpl(10).eq.118).or.
      &               (gfld%ipdtmpl(10).eq.150))then
                  ! Hybrid level (range from 1 to N)
-                 level=gfld%ipdtmpl(12)
+                 level=61-gfld%ipdtmpl(12)
+                 print*,"ARI",level
               elseif(gfld%ipdtmpl(10).eq.104) then
                  ! Sigma level (range from 10000 to 0)
                  level=gfld%ipdtmpl(12)
@@ -821,8 +822,8 @@ C  SET ARGUMENTS
               ! at pressure level LEVEL (Pa).  Dimensions of this data are 
               ! map%nx and map%ny.  Put this data into storage.
 
-              !print *,'call put_storage',iplvl,my_field,hold_array(55),ith
-              !e.g. call put_storage(200100, 'RH', my_field, 1, ith)
+              print *,'call put_storage',iplvl,my_field,hold_array(55),ith
+   !e.g. call put_storage(200100, 'RH', my_field, 1, ith)
 !             call mprintf(.true.,DEBUG,"Calling put_storage for
 !    &level = %i , field = %s , g2level = %i ", newline=.true.,
 !    & i1 = iplvl, s1 = my_field, i2 = gfld%ipdtmpl(12) )
