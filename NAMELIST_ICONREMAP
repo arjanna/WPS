@@ -1,0 +1,162 @@
+! interpolation regular grid-> ICON
+&remap_nml
+ in_grid_filename  = '/perm/ms/de/deav/grid/icon_grid_0027_R03B08_N02.nc'
+ in_filename       = 'tmp2320000_pm'
+ in_type           = 2
+ out_grid_filename = 'reggrid.nc'
+ out_filename      = 'tests.grb'
+ out_type          = 3
+ out_filetype      = 2
+ l_have3dbuffer    = .false.
+/
+! DEFINITIONS FOR ICON INPUT DATA
+&input_field_nml  
+ inputname      = "RELHUM"        
+ outputname     = "RELHUM"
+ intp_method    = 3
+/
+!
+&input_field_nml
+ inputname      = "U"         
+ outputname     = "U"          
+ intp_method    = 3
+/
+!
+&input_field_nml
+ inputname      = "QR"
+ outputname     = "QR"
+ intp_method    = 3
+/
+&input_field_nml
+ inputname      = "QV"
+ outputname     = "QV"
+ intp_method    = 3
+/
+&input_field_nml
+ inputname      = "QC"
+ outputname     = "QC"
+ intp_method    = 3
+/
+&input_field_nml
+ inputname      = "FI"
+ outputname     = "FI"
+ intp_method    = 3
+/
+&input_field_nml
+ inputname      = "V"         
+ outputname     = "V"          
+ intp_method    = 3
+/
+&input_field_nml
+ inputname      = "QI"
+ outputname     = "QI"
+ intp_method    = 3
+/
+!
+&input_field_nml
+ inputname      = "W"         
+ outputname     = "W"          
+ intp_method    = 3
+/
+&input_field_nml
+ inputname      = "P"
+ outputname     = "P"
+ intp_method    = 3
+/
+
+!
+&input_field_nml
+ inputname      = "T"         
+ outputname     = "T"          
+ intp_method    = 3
+/
+!
+&input_field_nml
+ inputname      = "FR_LAND"         
+ outputname     = "FR_LAND"          
+ intp_method    = 3
+/
+!
+&input_field_nml
+ inputname      = "PS"         
+ outputname     = "PSFC"          
+ intp_method    = 3
+/
+!
+&input_field_nml
+ inputname      = "PMSL"
+ outputname     = "PMSL"
+ intp_method    = 3
+/
+!
+&input_field_nml
+ inputname      = "U_10M"         
+ outputname     = "U_10M"          
+ intp_method    = 3
+/
+!
+&input_field_nml
+ inputname      = "V_10M"
+ outputname     = "V_10M"
+ intp_method    = 3
+/
+!
+&input_field_nml
+ inputname      = "W_SNOW"         
+ outputname     = "W_SNOW"          
+ intp_method    = 3
+/
+!
+&input_field_nml
+ inputname      = "H_SNOW"         
+ outputname     = "H_SNOW"          
+ intp_method    = 3
+/
+!
+&input_field_nml
+ inputname      = "T_G"         
+ outputname     = "T_G"          
+ intp_method    = 3
+/
+!
+&input_field_nml
+ inputname      = "HHL"         
+ outputname     = "z_ifc"          
+ intp_method    = 3
+/
+&input_field_nml
+ inputname      = "RELHUM_2M"         
+ outputname     = "RELHUM_2M"          
+ intp_method    = 3
+/
+&input_field_nml
+ inputname      = "T_2M"   
+ outputname     = "T_2M"    
+ intp_method    = 3
+/
+&input_field_nml
+ inputname      = "TD_2M"         
+ outputname     = "TD_2M"          
+ intp_method    = 3
+/
+&input_field_nml
+ inputname      = "W_SO"
+ outputname     = "W_SO"
+ intp_method    = 3
+/
+&input_field_nml
+ inputname      = "T_SO"
+ outputname     = "T_SO"
+ intp_method    = 3
+/
+&input_field_nml
+ inputname      = "HSURF"
+ outputname     = "HSURF"
+ intp_method    = 3
+/
+
+
+
+
+
+
