@@ -120,6 +120,7 @@ name=PRES
         derived=yes
         mandatory=yes    # MUST HAVE THIS FIELD
         fill_lev=all:PRESSURE
+        fill_lev=200100:PSFC(200100)
         fill_lev=all:vertical_index; level_template=TT
 ========================================
 name=LANDSEA 
