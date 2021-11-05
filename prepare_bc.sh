@@ -7,7 +7,7 @@ for filein in  $(ls /scratch/ms/de/dfy/Share/june_exp_bc/boundary_data/*/iefff00
 do
     rm -rf tmp${c}0000 wlev* tmp${c}0000_w tmp${c}0000_pm pmsl pmsl_ok testwso.grb new*.grb wso.grb tmpc${c}0000 tmp${c}0000 pmsl tmp${c}0000_pm pmsl_ok  
     grib_copy -w typeOfLevel!=isobaricInhPa $filein tmpc${c}0000
-    cdo -aexpr,'relhum_2m=100-5*(T_2M-TD_2M)' -aexpr,'relhum_2m=100-5*(T_2M-TD_2M)'  -aexpr,'RELHUM=QV/(0.622*6.112*exp(17.65*(T-273.15)/(T-29.65))/(P - 6.112*exp(17.65*(T-273.15)/(T-29.65))   )    )' -aexpr,'FI=HHL/9.81' -aexpr,'PMSL=PS*(1- (0.0065*HSURF/ ( T_2M + 0.0065*HSURF  )  )  )^(-5.257)' tmpc${c}0000 tmp${c}0000
+    cdo -aexpr,'relhum_2m=100-5*(T_2M-TD_2M)'  -aexpr,'RELHUM=QV/(0.622*6.112*exp(17.65*(T-273.15)/(T-29.65))/(P - 6.112*exp(17.65*(T-273.15)/(T-29.65))   )    )' -aexpr,'FI=HHL/9.81' -aexpr,'PMSL=PS*(1- (0.0065*HSURF/ ( T_2M + 0.0065*HSURF  )  )  )^(-5.257)' tmpc${c}0000 tmp${c}0000
     cdo selvar,PMSL tmp${c}0000 pmsl
     cdo delvar,PMSL tmp${c}0000 tmp${c}0000_pm
     grib_set -s typeOfFirstFixedSurface=101 pmsl pmsl_ok

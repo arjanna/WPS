@@ -760,8 +760,7 @@ C  SET ARGUMENTS
      &               (gfld%ipdtmpl(10).eq.118).or.
      &               (gfld%ipdtmpl(10).eq.150))then
                  ! Hybrid level (range from 1 to N)
-                 level=61-gfld%ipdtmpl(12)
-                 print*,"ARI",level
+                 level=gfld%ipdtmpl(12)
               elseif(gfld%ipdtmpl(10).eq.104) then
                  ! Sigma level (range from 10000 to 0)
                  level=gfld%ipdtmpl(12)
